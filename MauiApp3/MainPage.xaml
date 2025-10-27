@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+    Margin="20"
+    Spacing="15"
+    BackgroundColor="#F5F5F5">
+            <Label  x:Name="pol1"  Text="Kalkulator Napiwków"/>
+            <Label  x:Name="pol2"  Text="Kwota rachunku:"/>
+            <Entry  x:Name="pol3"  Placeholder="Kwota rachunku" />
+            <Label  x:Name="pol4"  Text="Procent napiwku:"/>
+            <Slider x:Name="pol5"  Minimum="0" Maximum="30" Value="15"/>
+            <Label  x:Name="pol6"
+               Text="{Binding x:DataType='Slider',
+                              Source={x:Reference pol5},
+                              Path=Value,
+                              StringFormat='{0:F1}%'}" />
+            <Button x:Name="pol7"  Text="Oblicz napiwek" Clicked="OnObliczPiwo"/>
+            <Label  x:Name="pol8"  />
+            <Label  x:Name="pol9"  />
+            <Button x:Name="pol10" Text="Wyczyść" Clicked="OnWypite"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
