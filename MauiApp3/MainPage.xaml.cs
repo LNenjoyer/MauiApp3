@@ -24,7 +24,7 @@
             }
             
         }
-        private void OnWypite(object? sender, EventArgs e)
+        private void OnClear(object? sender, EventArgs e)
         {
             pol5.Value = 15;
             pol3.Text = "0";

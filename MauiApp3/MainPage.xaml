@@ -5,23 +5,33 @@
 
     <ScrollView>
         <VerticalStackLayout
-    Margin="20"
-    Spacing="15"
-    BackgroundColor="#F5F5F5">
-            <Label  x:Name="pol1"  Text="Kalkulator Napiwków"/>
-            <Label  x:Name="pol2"  Text="Kwota rachunku:"/>
+            Margin="20"
+            Spacing="15"
+            BackgroundColor="#F5F5F5">
+            <Label  x:Name="pol1"  Text="Kalkulator Napiwków" BackgroundColor="#2196F3"
+                    FontSize="28" FontAttributes="Bold" TextColor="White" Padding="20"
+                    />
+            <Label  x:Name="pol2"  Text="Kwota rachunku:" BackgroundColor="#2196F3"
+                    FontSize="28" FontAttributes="Bold" TextColor="White" Padding="20"/>
             <Entry  x:Name="pol3"  Placeholder="Kwota rachunku" />
-            <Label  x:Name="pol4"  Text="Procent napiwku:"/>
+            <Label  x:Name="pol4"  Text="Procent napiwku:" BackgroundColor="#2196F3"
+                    FontSize="28" FontAttributes="Bold" TextColor="White" Padding="20"/>
             <Slider x:Name="pol5"  Minimum="0" Maximum="30" Value="15"/>
             <Label  x:Name="pol6"
                Text="{Binding x:DataType='Slider',
                               Source={x:Reference pol5},
                               Path=Value,
-                              StringFormat='{0:F1}%'}" />
-            <Button x:Name="pol7"  Text="Oblicz napiwek" Clicked="OnObliczPiwo"/>
-            <Label  x:Name="pol8"  />
-            <Label  x:Name="pol9"  />
-            <Button x:Name="pol10" Text="Wyczyść" Clicked="OnWypite"/>
+                              StringFormat='{0:F2}%'}" 
+                    BackgroundColor="#2196F3"
+                    FontSize="28" FontAttributes="Bold" TextColor="White" Padding="20"/>
+            <Button x:Name="pol7"  Text="Oblicz napiwek" Clicked="OnObliczPiwo" TextColor="White" MinimumHeightRequest="50" BackgroundColor="#4CAF50"/>
+
+            <Label  x:Name="pol8"  BackgroundColor="#1976D2"
+                    FontSize="20" FontAttributes="Bold" TextColor="White" Padding="20"/>
+            <Label  x:Name="pol9"  BackgroundColor="#1976D2"
+                    FontSize="20" FontAttributes="Bold" TextColor="White" Padding="20"/>
+
+            <Button x:Name="pol10" Text="Wyczyść" Clicked="OnClear" TextColor="White" MinimumHeightRequest="50" BackgroundColor="#FF9800"/>
         </VerticalStackLayout>
     </ScrollView>
 
